@@ -662,15 +662,15 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 #site-subtitle { font-size: 1em; font-family: "Hco Gotham Narrow", Helvetica, -apple-system, BlinkMacSystemFont, Arial, sans-serif; margin: 0; }
 
-#site-byline { padding: 0.5em; height: 1em; vertical-align: middle; margin: 0 auto; color: #fff; font-size: 1em; font-family: "Hco Gotham Narrow", Helvetica, -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-weight: 300; margin-bottom: 1em; width: 75%; }
+#site-byline { padding: 0.5em; height: 2rem; vertical-align: middle; margin: 0 auto; color: #fff; font-size: 1em; font-family: "Hco Gotham Narrow", Helvetica, -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-weight: 300; margin-bottom: 1rem; width: 75%; }
 
 #site-byline img { height: 0.8em; padding-bottom: 0.1em; vertical-align: middle; }
 
 #site-byline path { stroke: #fff; }
 
-.giv3-logo { -webkit-filter: drop-shadow(0 1px 1px rgba(51, 51, 51, 0.8)); filter: drop-shadow(0 1px 1px rgba(51, 51, 51, 0.8)); }
+.giv3-logo { -webkit-filter: brightness(0) invert(1); filter: brightness(0) invert(1); }
 
-#section--intro h2 { margin-top: 1em; }
+#section--intro h1 { margin-top: 1em; margin-bottom: 1em; font-family: "Hco Gotham", Helvetica, -apple-system, BlinkMacSystemFont, Arial, sans-serif; }
 
 .content-box { padding: 1.25em 0; }
 
@@ -679,6 +679,16 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 .raised-box > :first-child, blockquote > :first-child { margin-top: 0; }
 
 .raised-box > :last-child, blockquote > :last-child { margin-bottom: 0; }
+
+#cta-appeal { margin: 2rem 0 1.5rem; }
+
+#cta-appeal p { font-style: italic; }
+
+#cta-appeal h3 { margin: 0.5em 0; font-family: "Hco Gotham", Helvetica, -apple-system, BlinkMacSystemFont, Arial, sans-serif; }
+
+#cta-links { text-align: center; }
+
+#cta-links p { font-weight: bold; margin-bottom: 0.5em; }
 
 .fine-print { color: #bfbfbf; display: block; line-height: 1.1; }
 

@@ -123,9 +123,11 @@ p, pre, blockquote, ul, ol, dl, figure, table, fieldset { orphans: 3; widows: 3;
 abbr[title], abbr[data-original-title] { text-decoration: none; cursor: help; border-bottom: 1px dotted #1B2437; }
 
 /* blockquotes */
-blockquote { font-style: italic; margin-left: 0; margin-right: 0; color: #7e7e7e; }
+blockquote { font-weight: bold; font-style: italic; margin-left: 0; margin-right: 0; color: #fff; background-color: #AB1E27; display: flex; justify-content: center; align-items: center; padding: 1em; border-radius: 8px; }
 
-blockquote cite { font-style: normal; font-size: 0.8em; }
+blockquote p { margin: 0; }
+
+blockquote cite { font-style: normal; padding-left: 1em; }
 
 blockquote cite:before { content: "\2014"; padding-right: 5px; }
 
@@ -148,7 +150,7 @@ p > code, a > code, li > code, figcaption > code, td > code { padding-top: 0.1re
 p > code:before, p > code:after, a > code:before, a > code:after, li > code:before, li > code:after, figcaption > code:before, figcaption > code:after, td > code:before, td > code:after { letter-spacing: -0.2em; content: "\00a0"; }
 
 /* horizontal rule */
-hr { display: block; margin: 1em 0; border: 0; border-top: 1px solid #bfbfbf; }
+hr { display: block; margin: 1em 0; border: 0; border-top: 1px solid #6B7587; }
 
 /* lists */
 ul li, ol li { margin-bottom: 0.5em; }
@@ -373,13 +375,13 @@ ul.list-reset li, ol.list-reset li { list-style-type: none; }
 
 .show-modal .modal { display: block; }
 
-.modal { display: none; position: fixed; width: 300px; top: 50%; left: 50%; margin-left: -150px; margin-top: -150px; min-height: 0; z-index: 9999; background: #fff; border: 1px solid #bfbfbf; border-radius: 4px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125); }
+.modal { display: none; position: fixed; width: 300px; top: 50%; left: 50%; margin-left: -150px; margin-top: -150px; min-height: 0; z-index: 9999; background: #fff; border: 1px solid #6B7587; border-radius: 4px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125); }
 
 .modal__title { margin: 0; padding: 0.5em 1em; }
 
 .modal__supporting-text { padding: 0 1em 0.5em 1em; }
 
-.modal__actions { padding: 0.5em 1em; border-top: 1px solid #bfbfbf; }
+.modal__actions { padding: 0.5em 1em; border-top: 1px solid #6B7587; }
 
 /* Footnotes @mixin ========================================================================= */
 .footnote { color: #9e9e9e; text-decoration: none; }
@@ -432,7 +434,7 @@ label small { font-size: 0.8em; }
 
 label input, label textarea, label select { display: block; }
 
-input, textarea, select { display: inline-block; width: 100%; padding: 0.25em; margin-bottom: 0.5em; color: #1B2437; background-color: #fff; border: #bfbfbf; border-radius: 4px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125); }
+input, textarea, select { display: inline-block; width: 100%; padding: 0.25em; margin-bottom: 0.5em; color: #1B2437; background-color: #fff; border: #6B7587; border-radius: 4px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125); }
 
 .input-mini { width: 60px; }
 
@@ -520,7 +522,7 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 #goog-fixurl ul li { list-style-type: none; }
 
-#goog-wm-qt { width: auto; margin-right: 10px; margin-bottom: 20px; padding: 8px 20px; display: inline-block; font-size: 0.8em; background-color: #fff; color: #000; border-width: 2px !important; border-style: solid !important; border-color: #bfbfbf; border-radius: 4px; }
+#goog-wm-qt { width: auto; margin-right: 10px; margin-bottom: 20px; padding: 8px 20px; display: inline-block; font-size: 0.8em; background-color: #fff; color: #000; border-width: 2px !important; border-style: solid !important; border-color: #6B7587; border-radius: 4px; }
 
 /* ========================================================================== BUTTONS @mixin ========================================================================= */
 /* Default button @mixin ========================================================================= */
@@ -630,13 +632,15 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 .btn--copy.copied::before, .btn--copy.copied::after { opacity: 100; }
 
-#main-nav { z-index: 999; top: 0; left: 0; right: 0; position: static; }
+#main-nav { z-index: 999; top: 0; left: 0; right: 0; position: sticky; background-color: #fff; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); }
 
 .main-nav-contents { display: flex; justify-content: flex-end; align-items: center; }
 
-.nav-item a { display: block; color: #1B2437; border-radius: 1em; line-height: 1; vertical-align: middle; padding: 0.5em 1em 0.4em; margin-left: 0.5em; margin-top: 0.5em; background-color: rgba(255, 255, 255, 0.6); font-size: 0.8em; }
+.nav-item a { display: block; line-height: 1; vertical-align: middle; padding: 1em 1em 1em; color: #6B7587; font-size: 0.8em; position: relative; }
 
-.nav-item a:hover { background-color: #229bc9; color: #fff; }
+.nav-item a::after { bottom: 0; content: ""; height: 0.25em; left: 0; opacity: 0; position: absolute; right: 0; transform: scaleX(0); transition: all 0.2s ease-in-out 0s; }
+
+.nav-item a:hover::after { opacity: 1; background: #65788B; transform: scaleX(1); }
 
 .container { padding-left: 2em; padding-right: 2em; margin-left: auto; margin-right: auto; max-width: 1024px; }
 
@@ -674,11 +678,11 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 .content-box { padding: 1.25em 0; }
 
-.raised-box, blockquote { box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 1.5em; margin-bottom: 2em; }
+.raised-box { box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 1.5em; margin-bottom: 2em; }
 
-.raised-box > :first-child, blockquote > :first-child { margin-top: 0; }
+.raised-box > :first-child { margin-top: 0; }
 
-.raised-box > :last-child, blockquote > :last-child { margin-bottom: 0; }
+.raised-box > :last-child { margin-bottom: 0; }
 
 #cta-appeal { margin: 2rem 0 1.5rem; }
 
@@ -690,19 +694,25 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 #cta-links p { font-weight: bold; margin-bottom: 0.5em; }
 
-.fine-print { color: #bfbfbf; display: block; line-height: 1.1; }
+.fine-print { color: #6B7587; display: block; line-height: 1.1; }
 
 #main-footer { background-color: #AB1E27; color: #fff; padding: 1em 0; }
 
 h2.section--header { background-color: #AB1E27; border-radius: 8px; padding: 1.75em 1.5em 1.25em; color: #fff; background-image: url("/assets/img/logo-icon-white.svg"); background-position: center right 1.5em; background-repeat: no-repeat; background-size: 2em 2em; margin-top: 2rem; }
 
+#activities-list li { display: flex; align-items: center; margin-bottom: 2em; }
+
+#activities-list i { font-size: 100px; color: #F58436; display: block; width: 20%; text-align: center; }
+
+#activities-list p { margin-left: 1em; width: 80%; }
+
 #section--library { padding-bottom: 4rem; }
 
 #section--library .row { justify-content: stretch; margin-bottom: 1rem; }
 
-#section--library .raised-box, #section--library blockquote { height: 100%; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between; }
+#section--library .raised-box { height: 100%; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between; }
 
-#section--library .raised-box p, #section--library blockquote p { font-size: 0.8em; }
+#section--library .raised-box p { font-size: 0.8em; }
 
 #main-footer .container { display: flex; justify-content: space-between; align-items: center; }
 

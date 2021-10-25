@@ -674,7 +674,7 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 #site-byline path { stroke: #fff; }
 
-.giv3-logo { -webkit-filter: brightness(0) invert(1); filter: brightness(0) invert(1); }
+.giv3-logo { -webkit-filter: brightness(0) invert(1); filter: brightness(0) invert(1); border-bottom: 1px solid #fff; }
 
 #section--intro h1 { margin-top: 1em; margin-bottom: 1em; font-family: "Hco Gotham", Helvetica, -apple-system, BlinkMacSystemFont, Arial, sans-serif; }
 
@@ -715,6 +715,8 @@ h2.section--header { background-color: #AB1E27; border-radius: 8px; padding: 1.7
 #section--library .raised-box { height: 100%; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between; }
 
 #section--library .raised-box p { font-size: 0.8em; }
+
+#section--library .raised-box h4 a { text-decoration: none; }
 
 #main-footer .container { display: flex; justify-content: space-between; align-items: center; }
 

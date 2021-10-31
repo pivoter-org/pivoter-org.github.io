@@ -622,7 +622,7 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 .btn--large { font-size: 1em; }
 
-.btn--small { font-size: 0.6875em; padding: 0.5em 1em; }
+.btn--small { font-size: 1em; padding: 0.25em 0.75em; }
 
 .btn--copy { position: relative; }
 
@@ -719,6 +719,8 @@ h2.section--header { background-color: #AB1E27; border-radius: 8px; padding: 1.7
 #section--library .raised-box h4 a { text-decoration: none; }
 
 #main-footer .container { display: flex; justify-content: space-between; align-items: center; }
+
+#main-footer nav { text-align: right; }
 
 .copyright a { text-decoration: none; }
 

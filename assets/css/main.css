@@ -718,6 +718,8 @@ h2.section--header { background-color: #AB1E27; border-radius: 8px; padding: 1.7
 
 #section--library .raised-box h4 a { text-decoration: none; }
 
+#section--library .raised-box h4 { margin-top: 0; }
+
 #main-footer .container { display: flex; justify-content: space-between; align-items: center; }
 
 #main-footer nav { text-align: right; }
